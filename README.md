@@ -1,10 +1,5 @@
 # paginghelper [![Build Status](https://travis-ci.org/justlep/paginghelper.svg?branch=master)](https://travis-ci.org/justlep/paginghelper)
-A utility for generating an array that describes a paging. The array contains:
-* the first page number
-* a defined number of page numbers including the current page
-* the last page number
-* an "ellipse" value between the first page and the "middle block" of pages if the middle block doesnt contain the first page
-* an "ellipse" value between the "middle block" and the last page if the middle block doesn't contain the last page
+A utility for generating an object describing a paging, including an ellipse value between the "middle block" of displayed pages and the first and/or last page. 
 
 Example:
 ```javascript
