@@ -1,7 +1,5 @@
 # paginghelper [![Build Status](https://travis-ci.org/justlep/paginghelper.svg?branch=master)](https://travis-ci.org/justlep/paginghelper)
-A utility for generating pagings with first/last page and ellipsis.
-
-Generates an array containing 
+A utility for generating an array that describes a paging. The array contains:
 * the first page number
 * a defined number of page numbers including the current page
 * the last page number
