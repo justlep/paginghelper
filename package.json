@@ -2,7 +2,7 @@
   "name": "pagingutil",
   "version": "0.0.1",
   "description": "A utility for generating pagings with first/last page and ellipsis values.",
-  "main": "index.js",
+  "main": "src/PagingHelper.js",
   "scripts": {
     "test": "node_modules/.bin/jasmine",
     "validate": "node_modules/.bin/jshint src/",
