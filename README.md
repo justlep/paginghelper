@@ -1,6 +1,8 @@
 # paginghelper [![Build Status](https://travis-ci.org/justlep/paginghelper.svg?branch=master)](https://travis-ci.org/justlep/paginghelper)
 A utility for generating an object describing a paging, including an ellipse value between the "middle block" of displayed pages and the first and/or last page. 
 
+Demo (based on KnockoutJS): [http://codepen.io/justlep/pen/mEYEEE](http://codepen.io/justlep/pen/mEYEEE)
+
 Example:
 ```javascript
 PagingHelper.getPagingInfo({
