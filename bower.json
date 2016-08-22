@@ -1,5 +1,5 @@
 {
-  "name": "pagingutil",
+  "name": "paginghelper",
   "description": "A utility for generating pagings with first/last page and ellipsis values.",
   "main": "src/PagingHelper.js",
   "authors": [
