@@ -25,3 +25,10 @@ PagingHelper.getPagingInfo({
 ```
 
 See [PagingHelper.js](./src/PagingHelper.js) or [PagingHelper.spec.js](./spec/PagingHelper.spec.js).
+
+## Installation via Bower
+```sh
+$ bower install --save paginghelper
+```
+
+
