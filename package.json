@@ -4,7 +4,7 @@
   "description": "A utility for generating pagings with first/last page and ellipsis values.",
   "main": "src/PagingHelper.js",
   "scripts": {
-    "test": "node_modules/.bin/jasmine",
+    "test": "node spec/spec_runner.js",
     "validate": "node_modules/.bin/jshint src/",
     "pretest": "npm run validate"
   },
@@ -16,6 +16,7 @@
   ],
   "devDependencies": {
     "jasmine": "^2.4.1",
+    "jasmine-console-reporter": "^1.2.7",
     "jshint": "^2.9.3"
   },
   "author": "Lennart Pegel <github@justlep.net>",
@@ -75,5 +76,7 @@
     "trailing": true,
     "white": false,
     "indent": 4
+  },
+  "dependencies": {
   }
 }
