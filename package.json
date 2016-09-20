@@ -1,6 +1,6 @@
 {
   "name": "paginghelper",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A utility for generating pagings with first/last page and ellipsis values.",
   "main": "src/PagingHelper.js",
   "scripts": {
@@ -15,9 +15,9 @@
     "navigation"
   ],
   "devDependencies": {
-    "jasmine": "^2.4.1",
-    "jasmine-console-reporter": "^1.2.7",
-    "jshint": "^2.9.3"
+    "jasmine": "~2.4.1",
+    "jasmine-console-reporter": "~1.2.7",
+    "jshint": "~2.9.3"
   },
   "author": "Lennart Pegel <github@justlep.net>",
   "repository": {
