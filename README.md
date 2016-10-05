@@ -3,7 +3,7 @@ A utility for generating an object describing a paging, including an ellipse val
 
 Demo (based on KnockoutJS): [http://codepen.io/justlep/pen/YWbWxq](http://codepen.io/justlep/pen/YWbWxq)
 
-Example (using currentPage parameter):
+**Example** (using explicit *currentPage* and *lastPage*):
 ```javascript
 expect(PagingHelper.getPagingInfo({
     currentPage: 5,
@@ -22,7 +22,7 @@ expect(PagingHelper.getPagingInfo({
 });
 ```
 
-Example (using firstItemOffset parameter instead of currentPage)
+**Example** (using *firstItemOffset*, *itemsPerPage* and *totalItems*):
 ```javascript
 expect(PagingHelper.getPagingInfo({
     totalItems: 99,
