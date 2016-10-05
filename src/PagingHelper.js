@@ -2,27 +2,9 @@
  * A helper for generating an object describing `how to build a result-paging navigation` for a
  * given number of max. consecutive pages to display and the first+last page separated by an `ellipse` value.
  *
- * Git: https://github.com/justlep/paginghelper
+ * https://github.com/justlep/paginghelper
  *
- * Example:
- *   expect(PagingHelper.getPagingInfo({
- *       currentPage: 5,
- *       lastPage: 9,
- *       displayedPages: 5,
- *       ellipseValue: '---',
- *   })).toEqual({
- *       ellipseValue: '---',
- *       currentPage: 5,
- *       lastPage: 9,
- *       previousPage: 4,
- *       nextPage: 6,
- *       hasPreviousPage: true,
- *       hasNextPage: true,
- *       pageNumbers: [0, '---', 3, 4, 5, 6, 7, '---', 9]
- *   });
- *
- * See also: PagingHelper.spec.js
- *
+ * @license MIT
  */
 ;(function (factory) {
     'use strict';

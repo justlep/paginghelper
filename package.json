@@ -1,12 +1,13 @@
 {
   "name": "paginghelper",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A utility for generating pagings with first/last page and ellipsis values.",
   "main": "src/PagingHelper.js",
   "scripts": {
     "test": "node spec/spec_runner.js",
-    "validate": "node_modules/.bin/jshint src/",
-    "pretest": "npm run validate"
+    "pretest": "node_modules/.bin/jshint src/",
+    "build": "node_modules/.bin/uglifyjs src/PagingHelper.js --comments -c -o dist/PagingHelper.min.js",
+    "prebuild": "npm run test"
   },
   "keywords": [
     "paging",
@@ -15,9 +16,10 @@
     "navigation"
   ],
   "devDependencies": {
-    "jasmine": "~2.4.1",
-    "jasmine-console-reporter": "~1.2.7",
-    "jshint": "~2.9.3"
+    "jasmine": "^2.4.1",
+    "jasmine-console-reporter": "^1.2.7",
+    "jshint": "^2.9.3",
+    "uglify-js": "^2.7.3"
   },
   "author": "Lennart Pegel <github@justlep.net>",
   "repository": {

@@ -3,17 +3,14 @@ A utility for generating an object describing a paging, including an ellipse val
 
 Demo (based on KnockoutJS): [http://codepen.io/justlep/pen/YWbWxq](http://codepen.io/justlep/pen/YWbWxq)
 
-Example:
+Example (using currentPage parameter):
 ```javascript
-PagingHelper.getPagingInfo({
+expect(PagingHelper.getPagingInfo({
     currentPage: 5,
     lastPage: 9,
     displayedPages: 5,
     ellipseValue: '---',
-});
-// Returns:    
-{
-    pageNumbers: [0, '---', 3, 4, 5, 6, 7, '---', 9],
+})).toEqual({
     ellipseValue: '---',
     currentPage: 5,
     lastPage: 9,
@@ -21,7 +18,28 @@ PagingHelper.getPagingInfo({
     nextPage: 6,
     hasPreviousPage: true,
     hasNextPage: true,
-}
+    pageNumbers: [0, '---', 3, 4, 5, 6, 7, '---', 9]
+});
+```
+
+Example (using firstItemOffset parameter instead of currentPage)
+```javascript
+expect(PagingHelper.getPagingInfo({
+    totalItems: 99,
+    itemsPerPage: 10,
+    firstItemOffset: 90,
+    displayedPages: 5,
+    ellipseValue: '----'
+})).toEqual({
+    ellipseValue: '----',
+    currentPage: 9,
+    lastPage: 9,
+    previousPage: 8,
+    nextPage: 10,
+    hasPreviousPage: true,
+    hasNextPage: false,
+    pageNumbers: [0, '----', 5, 6, 7, 8, 9]
+});
 ```
 
 See [PagingHelper.js](./src/PagingHelper.js) or [PagingHelper.spec.js](./spec/PagingHelper.spec.js).

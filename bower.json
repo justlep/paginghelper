@@ -1,7 +1,7 @@
 {
   "name": "paginghelper",
   "description": "A utility for generating pagings with first/last page and ellipsis values.",
-  "main": "src/PagingHelper.js",
+  "main": "dist/PagingHelper.min.js",
   "authors": [
     "Lennart Pegel <github@justlep.net>"
   ],
@@ -17,7 +17,6 @@
     "**/.*",
     "node_modules",
     "bower_components",
-    "test",
-    "tests"
+    "spec"
   ]
 }
