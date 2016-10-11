@@ -6,7 +6,7 @@
  *
  * @license MIT
  */
-;(function (factory) {
+;(function (root, factory) {
     'use strict';
 
     if (typeof define === 'function' && define.amd) {
@@ -14,9 +14,9 @@
     } else if (typeof module === 'object' && typeof (module||{}).exports === 'object') {
         module.exports = factory();
     } else {
-        window.PagingHelper = factory();
+        root.PagingHelper = factory();
     }
-})(function() {
+})(this, function() {
 
     'use strict';
 
