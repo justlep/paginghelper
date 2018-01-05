@@ -25,7 +25,7 @@
             lastPage: 0,
             displayedPages: 5,
             showFirstLast: true,
-            ellipseValue: -1
+            ellipseValue: '|'
         },
         INFO_TEMPLATE = {
             ellipseValue: DEFAULT_OPTS.ellipseValue,
@@ -95,8 +95,7 @@
         var intervalStart = Math.max(0, opts.currentPage - Math.floor(opts.displayedPages / 2)),
             intervalEnd = Math.min(opts.lastPage, intervalStart + opts.displayedPages - 1),
             intervalSize = intervalEnd - intervalStart + 1,
-            pageItems = [],
-            ellipseValue = (typeof opts.ellipseValue === 'undefined') ? DEFAULT_OPTS.ellipseValue : opts.ellipseValue;
+            pageItems = [];
 
         // util.assert((typeof ellipseValue === 'number' && ellipseValue < 0) ||
         //    (typeof ellipseValue === 'string' && !!ellipseValue), 'Invalid ellipseValue');
@@ -108,18 +107,18 @@
         for (var i=intervalStart; i<=intervalEnd; i++) {
             if (opts.showFirstLast && (i === intervalStart) && (i >= 1)) {
                 pageItems.push(0);
-                pageItems.push(ellipseValue);
+                pageItems.push(opts.ellipseValue);
             }
             pageItems.push(i);
         }
 
         if (opts.showFirstLast && (intervalEnd < opts.lastPage)) {
-            pageItems.push(ellipseValue);
+            pageItems.push(opts.ellipseValue);
             pageItems.push(opts.lastPage);
         }
 
         return extend({}, INFO_TEMPLATE, {
-            ellipseValue: ellipseValue,
+            ellipseValue: opts.ellipseValue,
             currentPage: opts.currentPage,
             lastPage: opts.lastPage,
             hasPreviousPage: opts.currentPage > 0,
@@ -129,7 +128,6 @@
             pageNumbers: pageItems
         });
     }
-
 
     return {
         getPagingInfo: getPagingInfo

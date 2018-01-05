@@ -254,4 +254,20 @@ describe('PagingHelper', function() {
 
     });
 
+    it('will provide a default ellipseValue if no explicit one was input', function() {
+        expect(PagingHelper.getPagingInfo({
+            currentPage: 0,
+            lastPage: 0,
+            displayedPages: 5
+        })).toEqual({
+            ellipseValue: '|',
+            currentPage: 0,
+            lastPage: 0,
+            previousPage: -1,
+            nextPage: 1,
+            hasPreviousPage: false,
+            hasNextPage: false,
+            pageNumbers: [0]
+        });
+    });
 });
